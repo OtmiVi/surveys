@@ -1,13 +1,13 @@
 <?php
 
-namespace controllers;
+namespace App\Controllers;
 
-use core\Controller;
+use App\Core\Controller;
 
 class HomeController extends Controller
 {
     public function index()
     {
-
+        echo 1;
     }
 }

@@ -1,0 +1,20 @@
+{
+  "name": "vendor_name/surveys",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "kyziv",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "larapack/dd": "^1.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app\\"
+    }
+  }
+}
