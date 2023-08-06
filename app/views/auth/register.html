@@ -4,6 +4,11 @@
 
 {% block content %}
 <h1>{{ title }}</h1>
+{% if error is defined %}
+    <div class="alert alert-danger" role="alert">
+        {{error}}
+    </div>
+{% endif %}
 <form method="post" action="/auth/registerUser/">
     <div class="mb-3">
         <label for="userEmail" class="form-label">Email address</label>
