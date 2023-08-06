@@ -15,9 +15,7 @@ abstract class Controller extends \App\Core\Controller
     protected function view(string $view, array $data = []): void
     {
         $loader = new FilesystemLoader(__DIR__ . '\..\views');
-        $twig = new Environment($loader, [
-            'cache' => __DIR__ . '\..\cache',
-        ]);
+        $twig = new Environment($loader);
         $template = $twig->load($view .'.html');
 
         echo $template->render($data);
