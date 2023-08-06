@@ -11,6 +11,6 @@ abstract class Controller
      */
     protected function model(string $model): Model
     {
-        return new ('\\App\\Models\\' . $model)();
+        return new ('\\App\\Models\\ResourceModels\\' . $model. 'Resource')();
     }
 }

@@ -24,9 +24,13 @@ class AuthController extends Controller
             'title' => 'Login',
         ]);
     }
+
     public function loginUser()
     {
-        header("Location: /home/index/", true, 201);
+
+        /** @var \App\Models\ResourceModels\UserResource $user */
+        $user = $this->model('User');
+        //header("Location: /home/index/", true, 201);
         exit();
     }
 
