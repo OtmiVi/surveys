@@ -2,14 +2,16 @@
 
 namespace App\Core;
 
+use App\Models\ResourceModels\ResourceModel;
+
 abstract class Controller
 {
 
     /**
      * @param string $model
-     * @return Model
+     * @return ResourceModel
      */
-    protected function model(string $model): Model
+    protected function model(string $model): ResourceModel
     {
         return new ('\\App\\Models\\ResourceModels\\' . $model. 'Resource')();
     }
