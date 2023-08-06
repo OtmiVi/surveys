@@ -2,7 +2,15 @@
 
 namespace App\Core;
 
-class Controller
+abstract class Controller
 {
 
+    /**
+     * @param string $model
+     * @return Model
+     */
+    protected function model(string $model): Model
+    {
+        return new ('\\App\\Models\\' . $model)();
+    }
 }

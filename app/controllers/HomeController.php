@@ -2,12 +2,11 @@
 
 namespace App\Controllers;
 
-use App\Core\Controller;
-
 class HomeController extends Controller
 {
     public function index()
     {
-        echo 1;
+        $user = $this->model('User');
+        $this->view('test', ['name' => 'Oleg']);
     }
 }

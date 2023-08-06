@@ -19,15 +19,13 @@ class App
             if (!empty($url)) {
                 if (file_exists("../app/controllers/" . ucfirst($url[0]) . "Controller.php")) {
                     $this->controller = $url[0];
-                    unset($url[0]);
-                }
+                }//else 404
             }
 
             $this->controller = new ('\App\Controllers\\' . ucfirst($this->controller) . "Controller");
             if (isset($url[1])) {
                 if (method_exists($this->controller, $url[1])) {
                     $this->method = $url[1];
-                    unset($url[1]);
                 }
             }
 
