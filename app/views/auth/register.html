@@ -4,18 +4,18 @@
 
 {% block content %}
 <h1>{{ title }}</h1>
-<form>
+<form method="post" action="/auth/registerUser/">
     <div class="mb-3">
         <label for="userEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="userEmail">
+        <input type="email" class="form-control" id="userEmail" name="userEmail">
     </div>
     <div class="mb-3">
         <label for="userPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="userPassword">
+        <input type="password" class="form-control" id="userPassword" name="userPassword">
     </div>
     <div class="mb-3">
         <label for="userPasswordSecond" class="form-label">Repeat password</label>
-        <input type="password" class="form-control" id="userPasswordSecond">
+        <input type="password" class="form-control" id="userPasswordSecond" name="userPasswordSecond">
     </div>
     <div class="mb-3">
         <a href="/auth/login" class="link-primary">Login</a>
