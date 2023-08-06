@@ -1,0 +1,21 @@
+{% extends "layouts/welcomePage.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<form>
+    <div class="mb-3">
+        <label for="userEmail" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="userEmail">
+    </div>
+    <div class="mb-3">
+        <label for="userPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="userPassword">
+    </div>
+    <div class="mb-3">
+        <a href="/auth/register" class="link-primary">Register</a>
+    </div>
+    <button type="submit" class="btn btn-primary">{{ title }}</button>
+</form>
+{% endblock %}
